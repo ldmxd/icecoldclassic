@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cold Classic — Winter Solstice Ocean Swim, Manly Beach</title>
+    <meta name="description" content="The Ice Cold Classic is a winter solstice 1km ocean swim at Manly Beach, raising funds for One Meal. Sunday 21 June 2026." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ice Cold Classic — Winter Solstice Ocean Swim" />
+    <meta property="og:description" content="A 1km ocean swim at Manly Beach on the shortest day of the year. Embrace the cold, raise funds for One Meal." />
+    <meta property="og:image" content="https://icecoldclassic.com.au/images/og-image.png" />
+    <meta property="og:url" content="https://icecoldclassic.com.au/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue:        #1a8ac9;
+            --blue-deep:   #0e5a8a;
+            --blue-light:  #d9ecf6;
+            --blue-soft:   #f3f9fc;
+            --ice:         #e8f4fa;
+            --text:        #1a2733;
+            --muted:       #5a6b78;
+            --white:       #ffffff;
+            --border:      #d8e3eb;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bowlby One', 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+            color: var(--blue-deep);
+            letter-spacing: 0.5px;
+            margin: 0 0 0.5em 0;
+            line-height: 1.15;
+        }
+
+        a { color: var(--blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Header / Nav ────────────────────────────────────────── */
+        header.site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Bowlby One', sans-serif;
+            font-size: 18px;
+            color: var(--blue-deep);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+        .brand img { height: 40px; width: auto; }
+        nav.site-nav a {
+            color: var(--text);
+            margin-left: 24px;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        nav.site-nav a:hover { color: var(--blue); text-decoration: none; }
+        @media (max-width: 640px) {
+            nav.site-nav { display: none; }
+        }
+
+        /* ── Hero ─────────────────────────────────────────────────── */
+        .hero {
+            background: linear-gradient(180deg, var(--blue-soft) 0%, var(--white) 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .hero-character {
+            max-width: 280px;
+            width: 60%;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            color: var(--blue-deep);
+            margin-bottom: 0.3em;
+        }
+        .hero .tagline {
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            color: var(--muted);
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+        .hero-meta {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+            justify-content: center;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 10px 24px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            color: var(--text);
+            font-weight: 500;
+        }
+        .hero-meta span::before {
+            content: "·";
+            color: var(--border);
+            margin-right: 24px;
+        }
+        .hero-meta span:first-child::before { content: ""; margin: 0; }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--blue);
+            color: var(--white);
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s, transform 0.1s;
+            text-decoration: none;
+        }
+        .btn-primary:hover {
+            background: var(--blue-deep);
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            display: inline-block;
+            background: var(--white);
+            color: var(--blue);
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            border: 1.5px solid var(--blue);
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .btn-secondary:hover {
+            background: var(--blue);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* ── Sections ─────────────────────────────────────────────── */
+        section {
+            padding: 56px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        section:last-of-type { border-bottom: none; }
+        section h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            margin-bottom: 0.4em;
+            text-align: center;
+        }
+        section .section-intro {
+            text-align: center;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.05rem;
+        }
+
+        /* ── About / split layout ─────────────────────────────────── */
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .split { grid-template-columns: 1fr; gap: 24px; }
+        }
+        .split p { font-size: 1.05rem; color: var(--text); }
+
+        /* ── Event details cards ──────────────────────────────────── */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .detail-card {
+            background: var(--blue-soft);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .detail-card .label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .detail-card .value {
+            font-family: 'Bowlby One', sans-serif;
+            font-size: 1.4rem;
+            color: var(--blue-deep);
+            line-height: 1.2;
+        }
+
+        /* ── Fundraising / impact ─────────────────────────────────── */
+        .impact-banner {
+            background: var(--blue);
+            color: var(--white);
+            padding: 48px 24px;
+            text-align: center;
+            border-radius: 16px;
+        }
+        .impact-banner h2,
+        .impact-banner h3 { color: var(--white); }
+        .impact-banner .big-number {
+            font-family: 'Bowlby One', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 1;
+            margin: 12px 0;
+        }
+        .impact-banner p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 560px;
+            margin: 0 auto 24px;
+        }
+        .impact-banner .btn-secondary {
+            background: var(--white);
+            color: var(--blue);
+            border-color: var(--white);
+        }
+        .impact-banner .btn-secondary:hover {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        /* ── Results ──────────────────────────────────────────────── */
+        .results-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto 24px;
+        }
+        .result-card {
+            background: var(--blue-soft);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+        .result-card .medal { font-size: 2.2rem; line-height: 1; }
+        .result-card .name {
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin: 8px 0 4px;
+            color: var(--blue-deep);
+        }
+        .result-card .time {
+            font-family: 'Bowlby One', sans-serif;
+            font-size: 1.5rem;
+            color: var(--blue);
+        }
+        .result-card .category {
+            font-size: 13px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+        }
+        .results-cta { text-align: center; }
+
+        /* ── Video ────────────────────────────────────────────────── */
+        .video-wrap {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(14, 90, 138, 0.15);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .video-wrap iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+
+        /* ── Footer ───────────────────────────────────────────────── */
+        footer.site-footer {
+            background: var(--blue-deep);
+            color: var(--white);
+            padding: 40px 0 24px;
+            text-align: center;
+        }
+        footer.site-footer a { color: var(--blue-light); }
+        footer.site-footer .footer-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        footer.site-footer .footer-brand img { height: 48px; width: auto; }
+        footer.site-footer .small {
+            font-size: 13px;
+            color: var(--blue-light);
+            margin-top: 18px;
+            opacity: 0.8;
+        }
+
+        /* ── Utility ──────────────────────────────────────────────── */
+        .center { text-align: center; }
+        .mt-md  { margin-top: 24px; }
+        .stack-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ─────────────────────────────────────────────── -->
+    <header class="site-header">
+        <div class="container nav-row">
+            <a href="/" class="brand">
+                <img src="/images/logo.png" alt="Ice Cold Classic logo" />
+                <span>Ice Cold Classic</span>
+            </a>
+            <nav class="site-nav">
+                <a href="#about">About</a>
+                <a href="#details">Event</a>
+                <a href="#fundraising">Fundraising</a>
+                <a href="#results">Results</a>
+                <a href="https://coleclassic.com.au/icecoldclassic/" class="btn-secondary" style="padding:8px 20px;">Enter Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ── Hero ───────────────────────────────────────────────── -->
+    <section class="hero" style="border-bottom: none;">
+        <div class="container">
+            <img src="/images/character.png" alt="Ice Cold Classic mascot" class="hero-character" />
+            <h1>Ice Cold Classic</h1>
+            <p class="tagline">
+                A winter solstice ocean swim at Manly Beach. Embrace the cold,
+                warm up with hot soup, and raise funds for those doing it tough.
+            </p>
+            <div class="hero-meta">
+                <span>📅 Sunday 21 June 2026</span>
+                <span>📍 Manly Beach</span>
+                <span>🌊 1 km</span>
+            </div>
+            <div class="stack-buttons">
+                <a href="https://coleclassic.com.au/icecoldclassic/" class="btn-primary">Enter the 2026 Swim</a>
+                <a href="#fundraising" class="btn-secondary">Donate to One Meal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── About ──────────────────────────────────────────────── -->
+    <section id="about">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <h2>About the Event</h2>
+                    <p>
+                        Held at Manly Beach on the shortest day of the year,
+                        the <strong>Ice Cold Classic</strong> is a 1 km ocean swim
+                        that celebrates courage, community and compassion.
+                    </p>
+                    <p>
+                        Swimmers take on the icy winter water before warming up with
+                        hot soup on the beach — all while raising funds for
+                        <a href="https://onemeal.org.au/" target="_blank" rel="noopener"><strong>One Meal</strong></a>,
+                        a grassroots charity delivering meals to people experiencing
+                        homelessness, domestic violence and hardship.
+                    </p>
+                    <p>
+                        The inaugural 2025 event raised over <strong>$64,000</strong>
+                        for One Meal — and we're back, bigger and colder, in 2026.
+                    </p>
+                </div>
+                <div class="center">
+                    <img src="/images/logo.png"
+                         alt="Ice Cold Classic full logo"
+                         style="max-width: 360px; width: 90%; height: auto;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Event Details ──────────────────────────────────────── -->
+    <section id="details" style="background: var(--blue-soft);">
+        <div class="container">
+            <h2>Event Details</h2>
+            <p class="section-intro">
+                Everything you need to know to take on the cold in 2026.
+            </p>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="label">Date</div>
+                    <div class="value">Sun 21 Jun<br/>2026</div>
+                </div>
+                <div class="detail-card">
+                    <div class="label">Location</div>
+                    <div class="value">Manly Beach<br/>NSW</div>
+                </div>
+                <div class="detail-card">
+                    <div class="label">Distance</div>
+                    <div class="value">1 km<br/>Ocean Swim</div>
+                </div>
+                <div class="detail-card">
+                    <div class="label">Format</div>
+                    <div class="value">Mass Start<br/>Community</div>
+                </div>
+            </div>
+            <div class="center mt-md" style="margin-top: 36px;">
+                <a href="https://coleclassic.com.au/icecoldclassic/" class="btn-primary">Enter Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Fundraising ────────────────────────────────────────── -->
+    <section id="fundraising">
+        <div class="container">
+            <div class="impact-banner">
+                <h3 style="font-size: 1.4rem; margin-bottom: 0; opacity: 0.95;">2025 Raised</h3>
+                <div class="big-number">$64,000+</div>
+                <p>
+                    Every dollar raised goes to One Meal — providing meals to people
+                    facing homelessness, domestic violence and hardship across Sydney.
+                </p>
+                <a href="https://icecoldclassic25.grassrootz.com/onemeal"
+                   class="btn-secondary"
+                   target="_blank"
+                   rel="noopener">Donate via Grassrootz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Results ────────────────────────────────────────────── -->
+    <section id="results" style="background: var(--blue-soft);">
+        <div class="container">
+            <h2>2025 Results</h2>
+            <p class="section-intro">
+                Top finishers from the inaugural Ice Cold Classic.
+            </p>
+            <div class="results-list">
+                <div class="result-card">
+                    <div class="medal">🥇</div>
+                    <div class="category">Men's 1st</div>
+                    <div class="name">Hayden Cotter</div>
+                    <div class="time">12:54</div>
+                </div>
+                <div class="result-card">
+                    <div class="medal">🥇</div>
+                    <div class="category">Women's 1st</div>
+                    <div class="name">Jeanette Brits</div>
+                    <div class="time">13:46</div>
+                </div>
+            </div>
+            <div class="results-cta">
+                <a href="https://www.multisportaustralia.com.au/races/ice-cold-classic-2025/events/1?page=1"
+                   class="btn-secondary"
+                   target="_blank"
+                   rel="noopener">View Full 2025 Results</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Video ──────────────────────────────────────────────── -->
+    <section id="video">
+        <div class="container">
+            <h2>2025 Highlights</h2>
+            <p class="section-intro">
+                A glimpse of what it's like to take the plunge.
+            </p>
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/deSS7dxBvwE"
+                        title="Ice Cold Classic 2025 Highlights"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Why It Matters ─────────────────────────────────────── -->
+    <section id="why" style="background: var(--blue-soft);">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="center">Why It Matters</h2>
+            <p style="font-size: 1.1rem; text-align: center;">
+                The Ice Cold Classic is more than just a swim — it's a chance for the
+                ocean swimming community to come together, push their limits, and make
+                a real difference.
+            </p>
+            <p style="font-size: 1.1rem; text-align: center;">
+                Whether you're diving in or cheering from the beach, every participant
+                helps support people in need across Sydney.
+            </p>
+            <div class="center mt-md" style="margin-top: 36px;">
+                <div class="stack-buttons">
+                    <a href="https://coleclassic.com.au/icecoldclassic/" class="btn-primary">Enter the Swim</a>
+                    <a href="https://icecoldclassic25.grassrootz.com/onemeal" class="btn-secondary" target="_blank" rel="noopener">Donate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">
+                <img src="/images/character.png" alt="Ice Cold Classic" />
+                <span style="font-family: 'Bowlby One', sans-serif; font-size: 18px;">Ice Cold Classic</span>
+            </div>
+            <p>
+                A community ocean swim by the
+                <a href="https://drinksexpress.com.au/" target="_blank" rel="noopener">Drinks Express</a>
+                community. Run with the
+                <a href="https://coleclassic.com.au/" target="_blank" rel="noopener">Cole Classic</a>.
+            </p>
+            <p>
+                <a href="https://coleclassic.com.au/icecoldclassic/" target="_blank" rel="noopener">Enter</a> ·
+                <a href="https://icecoldclassic25.grassrootz.com/onemeal" target="_blank" rel="noopener">Donate</a> ·
+                <a href="https://onemeal.org.au/" target="_blank" rel="noopener">One Meal</a>
+            </p>
+            <p class="small">
+                © 2026 Ice Cold Classic. All proceeds support One Meal.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
